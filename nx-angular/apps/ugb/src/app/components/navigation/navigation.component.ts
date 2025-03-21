@@ -7,10 +7,10 @@ import { ButtonComponent } from "../button/Button.component";
   selector: 'app-navigation',
   imports: [RouterModule, CommonModule, ButtonComponent],
   template: `
-    <nav class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
+    <nav class="bg-secondary text-white shadow-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
         <!-- a placeholder square for my logo-->
-        <div class='w-20 h-8 bg-green-500 square'></div>
+        <div class='w-20 h-8 bg-primary square'></div>
         <div class="space-x-6 hidden md:flex">
           <app-button [isLink]="true" [routerLink]="['/food']" content="Food" variant="basic"/>
           <app-button [isLink]="true" [routerLink]="['/calorie-calculator']" content="Calorie Calculator" variant="basic"/>

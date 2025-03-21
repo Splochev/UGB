@@ -27,19 +27,19 @@ export class ButtonComponent {
 
     get buttonClass() {
         const baseClass = 'transition-all duration-300 ease-in-out transform cursor-pointer';
-        const effect = 'hover:scale-105 focus:outline-none focus:ring-2 focus:ring-green-500 active:scale-95';
+        const effect = 'hover:scale-105 focus:outline-none focus:ring-2 focus:ring-primary active:scale-95';
 
         switch (this.variant) {
             case 'flat':
-                return `${baseClass} ${effect} bg-green-500 text-white px-4 py-2 rounded-full 
-                hover:bg-green-600
+                return `${baseClass} ${effect} bg-primary text-white px-4 py-2 rounded-full 
+                hover:bg-primary-light
                 `;
             case 'contained':
-                return `${baseClass} ${effect} bg-transparent text-green-500 px-4 py-2 rounded-full 
-                border-2 border-green-500 hover:bg-green-500 hover:text-white`;
+                return `${baseClass} ${effect} bg-transparent text-primary px-4 py-2 rounded-full 
+                border-2 border-primary hover:bg-primary hover:text-white`;
             case 'basic':
             default:
-                return `${baseClass} hover:text-green-500`;
+                return `${baseClass} hover:text-primary`;
         }
     }
 }
