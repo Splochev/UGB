@@ -1,29 +1,24 @@
 import { Component } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { ButtonComponent } from "../button/Button.component";
 
 @Component({
   selector: 'app-navigation',
-  imports: [RouterModule, CommonModule],
+  imports: [RouterModule, CommonModule, ButtonComponent],
   template: `
     <nav class="bg-gray-900 text-white shadow-md sticky top-0 z-50">
       <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-        <!-- Logo Section (pushed to the right) -->
-        <div class="text-3xl font-bold text-green-500 ml-4">
-          Ur Gym Bud
-        </div>
-
-        <!-- Links Section -->
+        <!-- a placeholder square for my logo-->
+        <div class='w-20 h-8 bg-green-500 square'></div>
         <div class="space-x-6 hidden md:flex">
-          <a [routerLink]="['/food']" class="hover:text-green-500 transition-all duration-300">Food</a>
-          <a [routerLink]="['/calorie-calculator']" class="hover:text-green-500 transition-all duration-300">Calorie Calculator</a>
-          <a [routerLink]="['/one-rep-max-calculator']" class="hover:text-green-500 transition-all duration-300">1 Rep Max Calculator</a>
+          <app-button [isLink]="true" [routerLink]="['/food']" content="Food" variant="basic"/>
+          <app-button [isLink]="true" [routerLink]="['/calorie-calculator']" content="Calorie Calculator" variant="basic"/>
+          <app-button [isLink]="true" [routerLink]="['/one-rep-max-calculator']" content="1 Rep Max Calculator" variant="basic"/>
         </div>
-
-        <!-- Login / Sign up Section -->
         <div class="space-x-4">
-          <a [routerLink]="['/']" class="text-green-500 hover:text-white transition-all duration-300">Log in</a>
-          <a [routerLink]="['/sign-up']" class="bg-green-500 text-gray-900 px-4 py-2 rounded-full hover:bg-green-600 transition-all duration-300">Sign up</a>
+          <app-button [isLink]="true" [routerLink]="['/']" content="Log in" variant="basic"/>
+          <app-button [isLink]="true" [routerLink]="['/sign-up']" content="Sign up" variant="flat"/>
         </div>
       </div>
     </nav>
