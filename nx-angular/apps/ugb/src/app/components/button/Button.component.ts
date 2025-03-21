@@ -31,12 +31,12 @@ export class ButtonComponent {
 
         switch (this.variant) {
             case 'flat':
-                return `${baseClass} ${effect} bg-primary text-white px-4 py-2 rounded-full 
+                return `${baseClass} ${effect} bg-primary text-tertiary px-4 py-2 rounded-full 
                 hover:bg-primary-light
                 `;
             case 'contained':
                 return `${baseClass} ${effect} bg-transparent text-primary px-4 py-2 rounded-full 
-                border-2 border-primary hover:bg-primary hover:text-white`;
+                border-2 border-primary hover:bg-primary hover:text-tertiary`;
             case 'basic':
             default:
                 return `${baseClass} hover:text-primary`;
